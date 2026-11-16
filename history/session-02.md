@@ -17,9 +17,9 @@
 - Node.js dan Git menggunakan instalasi portabel karena pemasang MSI tidak merespons.
 
 ## Status Tahap 1
-- Persiapan lokal selesai; build, lint, dan tampilan browser terverifikasi.
-- Pembuatan repo GitHub, pengaturan remote, dan push pertama menunggu detail repo dan identitas commit.
+- Repo publik `rifkin789-debug/pencatatan-tugas` dibuat dan remote `origin` dihubungkan.
+- Commit awal berhasil di-push ke branch `main`.
+- Build, lint, tampilan browser, dan aturan ignore terverifikasi.
 
 ## Langkah Berikutnya
-- Buat repo GitHub, hubungkan remote lokal, lalu lakukan push pertama.
 - Setelah Tahap 1 selesai, lanjutkan Tahap 2 (Supabase).

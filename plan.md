@@ -6,8 +6,8 @@ Status: [ ] belum | [~] dikerjakan | [x] selesai
 - [x] Install Node.js dan Git
 - [x] Buat proyek React dengan Vite (`npm create vite@latest`)
 - [x] Jalankan proyek dan pastikan tampil di browser
-- [ ] Buat repo di GitHub
-- [ ] Hubungkan proyek lokal ke GitHub (`git init`, `git remote add`, push pertama)
+- [x] Buat repo di GitHub
+- [x] Hubungkan proyek lokal ke GitHub (`git init`, `git remote add`, push pertama)
 - [x] Buat `.gitignore` (pastikan `.env` dan `node_modules` masuk)
 
 ## Tahap 2: Setup Database (Supabase)
