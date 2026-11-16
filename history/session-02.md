@@ -22,4 +22,4 @@
 - Build, lint, tampilan browser, dan aturan ignore terverifikasi.
 
 ## Langkah Berikutnya
-- Setelah Tahap 1 selesai, lanjutkan Tahap 2 (Supabase).
+- Lanjutkan Tahap 2 dengan membuat project Supabase dan mengisi URL serta publishable/anon key.

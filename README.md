@@ -1,16 +1,34 @@
-# React + Vite
+# Pencatatan Tugas
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplikasi React + Vite untuk mencatat tugas dengan Supabase sebagai database dan Vercel untuk deployment.
 
-Currently, two official plugins are available:
+## Menjalankan secara lokal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Install Node.js dan jalankan `npm install`.
+2. Buat project Supabase, lalu jalankan SQL di `supabase/migrations/20261116000000_create_tasks.sql` melalui Supabase SQL Editor.
+3. Jalankan `Copy-Item .env.example .env` di PowerShell, lalu isi URL project dan publishable/anon key Supabase di `.env`.
+4. Jalankan `npm run dev`.
 
-## React Compiler
+Tanpa kredensial Supabase, aplikasi tetap dapat dijalankan dan menampilkan petunjuk konfigurasi, tetapi fitur penyimpanan tugas belum aktif.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Environment variables
 
-## Expanding the Oxlint configuration
+```env
+VITE_SUPABASE_URL=https://project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_...
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Gunakan publishable key (atau anon key lama), bukan `service_role`/secret key. File `.env` tidak dimasukkan ke Git.
+
+## Menjalankan pemeriksaan
+
+- `npm run lint`
+- `npm run build`
+
+## Deployment ke Vercel
+
+Hubungkan repo GitHub ini ke Vercel sebagai project Vite, lalu tambahkan `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY` di Environment Variables untuk Production, Preview, dan Development. `vercel.json` mengatur build dan output `dist`; push ke branch `main` memicu deployment setelah integrasi repo diaktifkan.
+
+## Akses data
+
+Spesifikasi saat ini tidak mencakup login. Kebijakan RLS pada migration membuat daftar tugas bersama dan mengizinkan pengunjung aplikasi membaca, menambah, mengedit, serta menghapus tugas. Jangan masukkan informasi sensitif. Jika tugas harus privat per pengguna, autentikasi dan kebijakan per-user perlu ditambahkan.

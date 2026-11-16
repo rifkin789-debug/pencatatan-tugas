@@ -12,13 +12,13 @@ Status: [ ] belum | [~] dikerjakan | [x] selesai
 
 ## Tahap 2: Setup Database (Supabase)
 - [ ] Buat akun dan proyek baru di Supabase
-- [ ] Buat tabel `tasks` sesuai `spec.md`
-- [ ] Atur Row Level Security (RLS) dan policy dasar
-- [ ] Isi beberapa data contoh untuk uji coba
+- [~] Buat tabel `tasks` sesuai `spec.md` (migration siap; perlu dijalankan pada project)
+- [~] Atur Row Level Security (RLS) dan policy dasar (migration siap; perlu dijalankan pada project)
+- [~] Isi beberapa data contoh untuk uji coba (seed di migration)
 - [ ] Salin Project URL dan anon key
-- [ ] Buat file `.env` berisi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`
-- [ ] Install `@supabase/supabase-js`
-- [ ] Buat file `src/lib/supabase.js` untuk koneksi
+- [ ] Buat file `.env` berisi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY` (menunggu URL/key project)
+- [x] Install `@supabase/supabase-js`
+- [x] Buat file `src/lib/supabase.js` untuk koneksi
 
 ## Tahap 3: Struktur Aplikasi
 - [ ] Rancang struktur folder (`components/`, `pages/`, `lib/`, `hooks/`)
@@ -59,7 +59,7 @@ Status: [ ] belum | [~] dikerjakan | [x] selesai
 
 ## Tahap 8: Deploy
 - [ ] Push semua kode ke GitHub
-- [ ] Hubungkan repo ke Vercel
+- [~] Hubungkan repo ke Vercel (konfigurasi siap; menunggu GitHub App Vercel diizinkan)
 - [ ] Isi environment variables di Vercel
 - [ ] Deploy dan cek link publik
 - [ ] Uji ulang semua fitur di versi online
